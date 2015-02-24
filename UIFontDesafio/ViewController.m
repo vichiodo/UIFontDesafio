@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(sumirTeclado)]];
+    //Outro jeito de esconder o teclado - MELHOR
+    //[self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,4 +60,9 @@
 - (void)sumirTeclado{
     [nome resignFirstResponder];
 }
+
+//metodo para sumir o teclado - MELHOR (Metodo da view)
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+//  [nome resignFirstResponder];
+//}
 @end

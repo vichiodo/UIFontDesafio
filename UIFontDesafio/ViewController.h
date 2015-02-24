@@ -10,6 +10,18 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *seuNome;
+@property (weak, nonatomic) IBOutlet UITextField *nome;
+
+- (IBAction)zapfino:(id)sender;
+
+- (IBAction)helvetica:(id)sender;
+
+- (IBAction)papyrus:(id)sender;
+
+- (IBAction)courier:(id)sender;
+
+- (IBAction)mudarNome:(id)sender;
 
 @end
 

@@ -14,9 +14,11 @@
 
 @implementation ViewController
 
+@synthesize seuNome, nome;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(sumirTeclado)]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +26,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)zapfino:(id)sender {
+    UIFont *font = [UIFont fontWithName:@"Zapfino" size:17];
+    [seuNome setFont:font];
+    
+}
+
+- (IBAction)helvetica:(id)sender {
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:17];
+    [seuNome setFont:font];
+    
+}
+
+- (IBAction)papyrus:(id)sender {
+    UIFont *font = [UIFont fontWithName:@"Papyrus" size:17];
+    [seuNome setFont:font];
+    
+}
+
+- (IBAction)courier:(id)sender {
+    UIFont *font = [UIFont fontWithName:@"Courier New" size:17];
+    [seuNome setFont:font];
+    
+}
+
+- (IBAction)mudarNome:(id)sender {
+    [seuNome setText:[nome text]];
+    [nome resignFirstResponder];
+}
+
+- (void)sumirTeclado{
+    [nome resignFirstResponder];
+}
 @end
